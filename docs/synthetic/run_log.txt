@@ -1,0 +1,32 @@
+features (206519, 19) in 5.6s
+spatial CV (train scene)
+| class | support | precision | recall | F1 | IoU |
+|---|---:|---:|---:|---:|---:|
+| ground | 188547 | 1.000 | 1.000 | 1.000 | 1.000 |
+| vegetation | 11347 | 0.997 | 0.995 | 0.996 | 0.993 |
+| building | 3844 | 1.000 | 0.989 | 0.994 | 0.989 |
+| wire | 1881 | 0.982 | 0.994 | 0.988 | 0.975 |
+| pole | 900 | 0.926 | 0.968 | 0.946 | 0.898 |
+
+mIoU: **0.971**
+held-out scene
+| class | support | precision | recall | F1 | IoU |
+|---|---:|---:|---:|---:|---:|
+| ground | 187444 | 1.000 | 1.000 | 1.000 | 1.000 |
+| vegetation | 11702 | 0.984 | 0.994 | 0.989 | 0.979 |
+| building | 4519 | 0.996 | 0.959 | 0.977 | 0.955 |
+| wire | 1881 | 0.961 | 0.968 | 0.965 | 0.931 |
+| pole | 900 | 0.922 | 0.958 | 0.940 | 0.886 |
+
+mIoU: **0.950**
+poles found 6 / true 6; conductors 15; spans 5
+{'u': 0, 'v': 1, 'n_conductors': 3, 'length': 50.014995210003796, 'max_sag': 0.7999797380347324, 'min_a': 391.1418031414728}
+{'u': 0, 'v': 2, 'n_conductors': 3, 'length': 49.98479891039252, 'max_sag': 0.7959424399834365, 'min_a': 392.53962221910075}
+{'u': 2, 'v': 3, 'n_conductors': 3, 'length': 50.042572098985026, 'max_sag': 0.7976755944970897, 'min_a': 392.56945492702454}
+{'u': 3, 'v': 4, 'n_conductors': 3, 'length': 50.54880232880117, 'max_sag': 0.8186496123512619, 'min_a': 390.35910360902614}
+{'u': 4, 'v': 5, 'n_conductors': 3, 'length': 50.543818087707216, 'max_sag': 0.8170706873484317, 'min_a': 391.15845856315093}
+catenary a (true 400): [409. 396. 393. 392. 391. 403. 405. 393. 398. 399. 399. 391. 390. 404.
+ 400.]
+min veg clearance per conductor: [1.42 2.2  2.99 1.26 2.05 2.91 6.62 5.97 5.3  0.36 0.36 0.24 2.73 2.81
+ 2.94]
+GIS QA: {'spans_detected': 5, 'gis_lines': 4, 'missing_from_gis': [0, 1, 2], 'gis_not_observed': [0, 1], 'length_precision': 0.5942745098039216, 'length_recall': 0.7292313664596273, 'gis_pole_offsets_m': [0.12, 0.42, 8.41, 1.05, 0.97, 0.42], 'gis_poles_misplaced': [2], 'gis_poles_unmatched': []} | injected: misplaced poles [2] dropped span 0
